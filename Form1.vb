@@ -93,7 +93,7 @@ Public Class Form1
     Private Sub btnMerge_Click(sender As Object, e As EventArgs) Handles btnMerge.Click
 
         Dim fileArray As String() = ListViewFiles.Items.Cast(Of ListViewItem)().Select(Function(item) item.SubItems(1).Text).ToArray()
-        MergePdfs(txtOutputFolder.Text, fileArray)
+        MergePdfs(txtOutputFolder.Text & "\MergedResult.pdf", fileArray)
     End Sub
 
     Private Sub btnCropMerge_Click(sender As Object, e As EventArgs) Handles btnCropMerge.Click
